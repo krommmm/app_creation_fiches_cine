@@ -3,7 +3,7 @@
 
 ## Application qui créer des fiches pour des films
 
- <img style="width: 100px;" src="./front/assets/images/readme/connexion.png" alt="connexion">  <img style="width: 100px;" src="./front/assets/images/readme/creationFiche.png" alt="creation fiche">   <img style="width: 100px;" src="./front/assets/images/readme/fiche.png" alt="fiche">
+ <img style="width: 100px;" src="home.png" alt="connexion">  
 
 
 ## Technos :
