@@ -1,67 +1,40 @@
-// const creationFiche = (nom_fichier) => {
-// 	// renomer  anim right
-// 	// changer img  + anim left + anim img from sky
-// 	// genre  anim
-// 	// description + button skip pour ne pas la faire
-// };
+import inscription from './pages/inscription';
+import connexion from './pages/connexion';
+import creationFiches from './pages/creationFiches';
+import affichageFilms from './pages/affichageFilms';
 
-// if (document.title === 'tri video') {
-// 	const directionCreerFicheFilm = (name) => {
-// 		let nameFile = name;
-// 		console.log(nameFile);
-// 		window.location.href = `../html/creationFiche.html?name=${nameFile}`;
-// 	};
+const getPageName = () => {
+	const PATH = window.location.pathname;
+	const PARTS = PATH.split('/');
+	const FILE_NAME = PARTS[PARTS.length - 1];
+	const PAGE_NAME = FILE_NAME.replace('.html', '');
+	return PAGE_NAME;
+};
 
-// 	// afficher une zone de selection en drag and drop
-// 	function dropHandler(event) {
-// 		event.preventDefault();
+let pageName = getPageName();
 
-// 		// Récupérer le fichier déposé
-// 		const file = event.dataTransfer.files[0];
+switch (pageName) {
+	case 'index':
+		connexion();
+		break;
 
-// 		// Vérifier si le fichier est de type MP4
-// 		if (file && file.type === 'video/avi') {
-// 			// Afficher le nom du fichier
-// 			directionCreerFicheFilm(file.name);
-// 		} else {
-// 			alert('Veuillez déposer un fichier MP4 valide.');
-// 		}
-// 	}
+	case 'inscription':
+		inscription();
+		break;
 
-// 	function dragOverHandler(event) {
-// 		event.preventDefault();
-// 	}
+	case 'home':
+		affichageFilms();
+		break;
 
-// 	ondrop = 'dropHandler(event)';
-// 	ondragover = 'dragOverHandler(event)';
+	case 'creationFiche':
+		creationFiches();
+		break;
 
-// 	const dropArea = document.getElementById('dropArea');
-// 	dropArea.addEventListener('drop', (e) => dropHandler(e));
-// 	dropArea.addEventListener('dragover', (e) => dragOverHandler(e));
-// }
-
-// if (document.title === 'Création fiche') {
-// 	var str = window.location.href;
-// 	var url = new URL(str);
-// 	var nom_fichier = url.searchParams.get('name');
-// 	console.log(nom_fichier);
-// 	creationFiche(nom_fichier);
-// }
-
-import inscription from './fonctions/inscription';
-import connexion from './fonctions/connexion';
-import creationFiches from './fonctions/creationFiches';
-import affichageFilms from './fonctions/affichageFilms';
-
-if (document.title === 'Netflix inscription') {
-	inscription();
-} else if (document.title === 'Netflix connexion') {
-	connexion();
-} else if (document.title === 'Netflix Création fiche') {
-	creationFiches();
-} else if (document.title === 'Netflix home') {
-	affichageFilms();
+	default:
+		console.error('Page introuvable');
 }
+
+
 
 // DECONNEXION
 document.addEventListener('click', (event) => {

@@ -29,7 +29,7 @@ Ajouter les films manuellement dans le dossier films<br>
  
 ## Variables d'environnement:
 A la racine du back : <br>
-> USER="identifiants mongodb"<br>
+> USER="identifiants mongodb" (changer le nom et sa correspondance sur mac)<br>
 > PASSWORD="passwordMongodb"<br>
 > SECRET_KEY="chaine de charactères"<br>
 

@@ -13,6 +13,7 @@ mongoose.set('strictQuery', true);
 mongoose
 	.connect(
 		`mongodb+srv://${process.env.USER}:${process.env.PASSWORD}@cluster0.anqun3y.mongodb.net/`
+		
 	)
 	.then(() => console.log('Connection à mongoDB réussie ! '))
 	.catch(() => console.log('Connexion à mongoDB échouée ! '));
