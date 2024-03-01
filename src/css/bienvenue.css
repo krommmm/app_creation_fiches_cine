@@ -271,6 +271,7 @@ footer .colonnes {
 	border: 3px solid white;
 	animation-name: modal-content;
 	animation-duration: 1s;
+	overflow:hidden;
 }
 @keyframes modal-content {
 	0% {
