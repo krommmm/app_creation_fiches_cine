@@ -330,6 +330,19 @@ footer .colonnes {
 	width: 100px;
 }
 
+/* RECHERCHE  */
+input[name='myInput']{
+	padding: 5px;
+	display:none;
+}
+.mini_img{
+	width: 100px;
+}
+.img_films{
+	display:flex;
+	flex-wrap:wrap;
+}
+
 /* Fin du pied de page */
 
 @media screen and (max-width: 610px) {

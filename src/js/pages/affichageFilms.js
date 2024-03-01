@@ -3,7 +3,7 @@ import Film from '../class/film/film';
 import Carrousel from '../class/film/carrousel';
 
 const affichageFilms = async () => {
-	let requette = new GestionnaireServices();
+	let requette = new GestionnaireServices(); 
 	let films = await requette.getFilms();
 
 	let newFilm = new Film(films);
