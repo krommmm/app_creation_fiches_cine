@@ -3,7 +3,7 @@
 
 ## Application qui créer des fiches pour des films
 
- <img style="width: 100px;" src="home.png" alt="connexion">   <img style="width: 100px;" src="focus_film.png" alt="connexion">   <img style="width: 100px;" src="search_film.png" alt="connexion">  
+ <img style="width: 100px;" src="home.png" alt="connexion"/>   <img style="width: 100px;" src="focus_film.png" alt="focus"/>   <img style="width: 100px;" src="search_film.png" alt="search"/>  
 
 
 ## Technos :
